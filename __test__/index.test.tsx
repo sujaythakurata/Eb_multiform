@@ -14,6 +14,9 @@ const renderComponent = async () => {
 };
 
 describe('Index Page', () => {
+  test('Index Page Render', async () => {
+    await act(renderComponent);
+  });
   test('Index page get Form tag', async () => {
     await act(renderComponent);
     expect('Form').toEqual(screen.getByTestId('form').textContent);
