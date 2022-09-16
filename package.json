@@ -44,7 +44,7 @@
   "lint-staged": {
     "*.{ts,tsx}": [
       "npm run prettier:fix",
-      "eslint --fix",
+      "eslint --fix \"**/*.+(ts|tsx)\"",
       "git add ."
     ],
     "*.{html,scss,json}": [
