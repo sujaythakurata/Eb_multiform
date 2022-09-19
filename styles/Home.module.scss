@@ -1,0 +1,11 @@
+.grid__container {
+  display: grid;
+  min-height: 100%;
+  height: auto;
+  grid: 60px calc(100% - 60px) / 100%;
+  border: solid green;
+  .grid__area__1,
+  .grid__area__2 {
+    border: solid yellow;
+  }
+}
