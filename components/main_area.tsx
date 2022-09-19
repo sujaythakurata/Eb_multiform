@@ -8,10 +8,7 @@ export default function MainArea({ children }: { children: JSX.Element }) {
           <div className="col-sm-4 col-lg-12">
             <SideBar />
           </div>
-          <div className="col-sm-8 col-lg-12">
-            {children}
-            <button className="btn btn-primary">ok</button>
-          </div>
+          <div className="col-sm-8 col-lg-12">{children}</div>
         </div>
       </div>
     </>
