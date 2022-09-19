@@ -1,20 +1,22 @@
 import { FormikProps, useFormik } from 'formik';
 
 import * as Yup from 'yup';
-import { addForm } from '../features/formslice';
+import validation from '../functions/preview_validation';
+import { useAppSelector } from '../states/hook';
 
-import validation from '../functions/form1validation';
-import { useAppDispatch, useAppSelector } from '../states/hook';
-import { IFormData } from '../types/form';
-
-export default function useForm2() {
+export default function usePreview() {
   const formData = useAppSelector(state => state.form.formData);
-  const dispatch = useAppDispatch();
-  const formik: FormikProps<IFormData> = useFormik({
-    initialValues: formData,
+  const formik: FormikProps<any> = useFormik({
+    initialValues: {
+      ...formData.ownerDetails,
+      ...formData.renterDetails,
+      ...formData.agreement,
+      ...formData.mailingDetails,
+      ...formData.deliveryDetails,
+    },
     validationSchema: Yup.object({ ...validation }),
     onSubmit: values => {
-      dispatch(addForm(values));
+      console.log(values);
     },
   });
   return formik;

@@ -1,11 +1,11 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import initialState from '../functions/initialState';
 import {
-  IForm1,
-  IForm2,
-  IForm3,
-  IForm4,
-  IForm5,
+  IOwnerDetails,
+  IRenterDetails,
+  IAgreement,
+  IMailingDetails,
+  IDeliveryDetails,
   IFormData,
 } from '../types/form';
 
@@ -20,29 +20,29 @@ export const userSlice = createSlice({
   name: 'form',
   initialState,
   reducers: {
-    addForm1: (state, action: PayloadAction<IForm1>) => {
-      state.curForm = 0;
-      state.formData.form1 = action.payload;
+    addOwnerDetails: (state, action: PayloadAction<IOwnerDetails>) => {
+      // state.curForm = 0;
+      state.formData.ownerDetails = action.payload;
       setLocalStoreData(state.curForm, state.formData);
     },
-    addForm2: (state, action: PayloadAction<IForm2>) => {
-      state.curForm = 1;
-      state.formData.form2 = action.payload;
+    addRenterDetails: (state, action: PayloadAction<IRenterDetails>) => {
+      // state.curForm = 1;
+      state.formData.renterDetails = action.payload;
       setLocalStoreData(state.curForm, state.formData);
     },
-    addForm3: (state, action: PayloadAction<IForm3>) => {
-      state.curForm = 2;
-      state.formData.form3 = action.payload;
+    addAgreement: (state, action: PayloadAction<IAgreement>) => {
+      // state.curForm = 2;
+      state.formData.agreement = action.payload;
       setLocalStoreData(state.curForm, state.formData);
     },
-    addForm4: (state, action: PayloadAction<IForm4>) => {
-      state.curForm = 3;
-      state.formData.form4 = action.payload;
+    addMailingDetails: (state, action: PayloadAction<IMailingDetails>) => {
+      // state.curForm = 3;
+      state.formData.mailingDetails = action.payload;
       setLocalStoreData(state.curForm, state.formData);
     },
-    addForm5: (state, action: PayloadAction<IForm5>) => {
-      state.curForm = 4;
-      state.formData.form5 = action.payload;
+    addDeliveryDetails: (state, action: PayloadAction<IDeliveryDetails>) => {
+      // state.curForm = 4;
+      state.formData.deliveryDetails = action.payload;
       setLocalStoreData(state.curForm, state.formData);
     },
     addForm: (state, action: PayloadAction<IFormData>) => {
@@ -85,11 +85,11 @@ const setLocalStoreData = (curForm: number, formData: IFormData) => {
 export default userSlice.reducer;
 
 export const {
-  addForm1,
-  addForm2,
-  addForm3,
-  addForm4,
-  addForm5,
+  addOwnerDetails,
+  addRenterDetails,
+  addAgreement,
+  addMailingDetails,
+  addDeliveryDetails,
   getInitialData,
   setNextForm,
   addForm,

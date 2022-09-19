@@ -8,21 +8,21 @@ import IForm from '../types/form';
 const initialState: IForm = {
   curForm: 0,
   formData: {
-    form1: {
+    ownerDetails: {
       ownerDesignation: '',
       ownerName: '',
       ownerRelation: '',
       ownerRelationName: '',
       ownerAddress: '',
     },
-    form2: {
+    renterDetails: {
       renterDesgination: '',
       renterName: '',
-      renterRealtion: '',
+      renterRelation: '',
       renterRelationName: '',
       renterAddress: '',
     },
-    form3: {
+    agreement: {
       doa: '',
       advanceAmountPaid: 0,
       monthlyRent: 0,
@@ -31,14 +31,14 @@ const initialState: IForm = {
       clauses: '',
       propertyDetails: '',
     },
-    form4: {
+    mailingDetails: {
       stampDutyAmount: 0,
       notarySeal: '',
       code: '',
       paidBy: '',
       delivery: '',
     },
-    form5: {
+    deliveryDetails: {
       postal: '',
       contactName: '',
       contactNumber: '',

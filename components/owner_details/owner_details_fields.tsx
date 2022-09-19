@@ -2,22 +2,22 @@ import { FormikProps } from 'formik';
 import { ChangeEvent } from 'react';
 import style from '../../styles/home.module.scss';
 import env from '../../env/env.json';
-import { IForm1 } from '../../types/form';
+import { IOwnerDetails } from '../../types/form';
 import { useAppDispatch } from '../../states/hook';
-import { addForm1 } from '../../features/formslice';
+import { addOwnerDetails } from '../../features/formslice';
 import Input from '../fields/input';
 import Radio from '../fields/radio';
 import TextArea from '../fields/text_area';
 
-export default function Form1Fields(props: FormikProps<IForm1>) {
-  const formFields = env.form.form1;
+export default function OwnerDetailsFields(props: FormikProps<IOwnerDetails>) {
+  const formFields = env.form.ownerDetails;
   const dispatch = useAppDispatch();
   /*
    *@return void
    *onblur save the form data
    */
   const onBlur = (event: ChangeEvent<any>) => {
-    dispatch(addForm1(props.values));
+    dispatch(addOwnerDetails(props.values));
     props.handleChange(event);
   };
   /*
@@ -31,20 +31,20 @@ export default function Form1Fields(props: FormikProps<IForm1>) {
           <Radio
             {...props}
             onBlur={onBlur}
-            label={formFields.label1}
-            id={formFields.keys[0]}
+            label={formFields.titleLabel}
+            id={formFields.ownerKeys[0]}
             errorMsg={props.errors.ownerDesignation}
             touchField={props.touched.ownerDesignation}
             value={props.values.ownerDesignation}
-            formValue={formFields.value1}
+            formValue={formFields.titleOptions}
           />
         </div>
         <div className={`form-group ${style.content__area__70}`}>
           <Input
             {...props}
             onBlur={onBlur}
-            label={formFields.label2}
-            id={formFields.keys[1]}
+            label={formFields.nameLabel}
+            id={formFields.ownerKeys[1]}
             errorMsg={props.errors.ownerName}
             touchField={props.touched.ownerName}
             value={props.values.ownerName}
@@ -56,20 +56,20 @@ export default function Form1Fields(props: FormikProps<IForm1>) {
           <Radio
             {...props}
             onBlur={onBlur}
-            label={formFields.label3}
-            id={formFields.keys[2]}
+            label={formFields.relationLabel}
+            id={formFields.ownerKeys[2]}
             errorMsg={props.errors.ownerRelation}
             touchField={props.touched.ownerRelation}
             value={props.values.ownerRelation}
-            formValue={formFields.value2}
+            formValue={formFields.relationOptions}
           />
         </div>
         <div className={`form-group  ${style.content__area__70}`}>
           <Input
             {...props}
             onBlur={onBlur}
-            label={formFields.label4}
-            id={formFields.keys[3]}
+            label={formFields.relationNameLabel}
+            id={formFields.ownerKeys[3]}
             errorMsg={props.errors.ownerRelationName}
             touchField={props.touched.ownerRelationName}
             value={props.values.ownerRelationName}
@@ -81,8 +81,8 @@ export default function Form1Fields(props: FormikProps<IForm1>) {
           <TextArea
             {...props}
             onBlur={onBlur}
-            label={formFields.label5}
-            id={formFields.keys[4]}
+            label={formFields.addressLabel}
+            id={formFields.ownerKeys[4]}
             errorMsg={props.errors.ownerAddress}
             touchField={props.touched.ownerAddress}
             value={props.values.ownerAddress}

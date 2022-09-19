@@ -25,7 +25,7 @@ export default function Radio(props: IRadio) {
             id={`${props.id}-${index}`}
             onChange={props.handleChange}
             onBlur={props.onBlur}
-            checked={props.values.ownerDesignation === value}
+            checked={props.value === value}
             value={value}
           />
           <label className="form-check-label" htmlFor={`${props.id}-${index}`}>

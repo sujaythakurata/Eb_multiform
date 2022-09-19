@@ -1,21 +1,21 @@
 import { FormikProps, useFormik } from 'formik';
 
 import * as Yup from 'yup';
-import { addForm3, setNextForm } from '../features/formslice';
+import { addDeliveryDetails, setNextForm } from '../features/formslice';
 
-import validation from '../functions/form1validation';
+import validation from '../functions/delivery_details_validation';
 import { useAppDispatch, useAppSelector } from '../states/hook';
-import { IForm3 } from '../types/form';
+import { IDeliveryDetails } from '../types/form';
 
-export default function useForm3() {
-  const formData = useAppSelector(state => state.form.formData.form3);
+export default function useDeliveryDetails() {
+  const formData = useAppSelector(state => state.form.formData.deliveryDetails);
   const curForm = useAppSelector(state => state.form.curForm);
   const dispatch = useAppDispatch();
-  const formik: FormikProps<IForm3> = useFormik({
+  const formik: FormikProps<IDeliveryDetails> = useFormik({
     initialValues: formData,
     validationSchema: Yup.object({ ...validation }),
     onSubmit: values => {
-      dispatch(addForm3(values));
+      dispatch(addDeliveryDetails(values));
       dispatch(setNextForm(curForm + 1));
     },
   });

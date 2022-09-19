@@ -1,18 +1,30 @@
+/* eslint-disable prettier/prettier */
 import env from '../env/env.json';
 import { useAppSelector } from '../states/hook';
-import Form1 from './form_1/form_1';
-import Form2 from './form_2';
-import Form3 from './form_3';
-import Form4 from './form_4';
-import Form5 from './form_5';
-import Preview from './preview';
+import OwnerDetails from './owner_details/owner_details';
+import RenterDetails from './renter_details/renter_details';
+import Agreement from './agreement/agreement';
+import MailingDetails from './mailing_details/mailing_details';
+import DeliveryDetails from './delivery_details/delivery_details';
+import Preview from './preview/preview';
 
 export default function Form() {
+  /*
+    @cursate current form state
+  */
   const curState = useAppSelector(state => state.form.curForm);
-  if (curState === env.form.form1.state) return <Form1 />;
-  if (curState === env.form.form2.state) return <Form2 />;
-  if (curState === env.form.form3.state) return <Form3 />;
-  if (curState === env.form.form4.state) return <Form4 />;
-  if (curState === env.form.form5.state) return <Form5 />;
-  if (curState === env.form.preview.state) return <Preview />;
+  switch (curState) {
+  case env.form.ownerDetails.state:
+    return <OwnerDetails />;
+  case env.form.renterDetails.state:
+    return <RenterDetails />;
+  case env.form.agreement.state:
+    return <Agreement />;
+  case env.form.mailingDetails.state:
+    return <MailingDetails />;
+  case env.form.deliveryDetails.state:
+    return <DeliveryDetails />;
+  default:
+    return <Preview />;
+  }
 }

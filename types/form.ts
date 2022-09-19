@@ -2,21 +2,21 @@
  *Form data
  *multistep form total 5 forms
  */
-export interface IForm1 {
+export interface IOwnerDetails {
   ownerDesignation: string;
   ownerName: string;
   ownerRelation: string;
   ownerRelationName: string;
   ownerAddress: string;
 }
-export interface IForm2 {
+export interface IRenterDetails {
   renterDesgination: string;
   renterName: string;
-  renterRealtion: string;
+  renterRelation: string;
   renterRelationName: string;
   renterAddress: string;
 }
-export interface IForm3 {
+export interface IAgreement {
   doa: string;
   advanceAmountPaid: number;
   monthlyRent: number;
@@ -25,14 +25,14 @@ export interface IForm3 {
   clauses: string;
   propertyDetails: string;
 }
-export interface IForm4 {
+export interface IMailingDetails {
   stampDutyAmount: number;
   notarySeal: string;
   code: string;
   paidBy: string;
   delivery: string;
 }
-export interface IForm5 {
+export interface IDeliveryDetails {
   postal: string;
   contactName: string;
   contactNumber: string;
@@ -41,11 +41,11 @@ export interface IForm5 {
   pincode: string;
 }
 export interface IFormData {
-  form1: IForm1;
-  form2: IForm2;
-  form3: IForm3;
-  form4: IForm4;
-  form5: IForm5;
+  ownerDetails: IOwnerDetails;
+  renterDetails: IRenterDetails;
+  agreement: IAgreement;
+  mailingDetails: IMailingDetails;
+  deliveryDetails: IDeliveryDetails;
 }
 
 interface IForm {

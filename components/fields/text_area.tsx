@@ -1,5 +1,6 @@
 import { FormikProps } from 'formik';
 import { ChangeEvent } from 'react';
+import ToolTip from './tooltip';
 
 type ITextArea = FormikProps<any> & {
   id: string;
@@ -9,11 +10,13 @@ type ITextArea = FormikProps<any> & {
   errorMsg: string | undefined;
   touchField: boolean | undefined;
   value: string;
+  toolTip?: string;
 };
 export default function TextArea(props: ITextArea) {
   return (
     <>
       <label htmlFor={props.id} className="form-label">
+        {props.toolTip ? <ToolTip title={props.toolTip} /> : ''}
         {props.label}
       </label>
       <textarea
