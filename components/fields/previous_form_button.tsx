@@ -2,7 +2,7 @@ import { setNextForm } from '../../features/formslice';
 import { useAppDispatch } from '../../states/hook';
 import style from '../../styles/home.module.scss';
 
-export default function PrevBtn({ state }: { state: number }) {
+export default function PreviousFormButton({ state }: { state: number }) {
   const dispatch = useAppDispatch();
   const handleClick = () => {
     dispatch(setNextForm(state - 1));

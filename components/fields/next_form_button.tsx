@@ -1,6 +1,6 @@
 import style from '../../styles/home.module.scss';
 
-export default function NextBtn() {
+export default function NextFormButton() {
   return (
     <>
       <div className={style.form__content__area}>

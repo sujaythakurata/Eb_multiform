@@ -2,13 +2,13 @@ import { FormikProps } from 'formik';
 import { memo } from 'react';
 import useInitialData from '../../hooks/useInitialdata';
 import style from '../../styles/home.module.scss';
-import NextBtn from '../fields/nextbtn';
-import env from '../../env/env.json';
+import NextFormButton from '../fields/next_form_button';
+import env from '../../config/config.json';
 import { IAgreement } from '../../types/form';
 import useAgreement from '../../hooks/use_agreement';
 import AgreementFields from './agreement_fields';
 import { useAppSelector } from '../../states/hook';
-import PrevBtn from '../fields/prevbtn';
+import PreviousFormButton from '../fields/previous_form_button';
 
 function Agreement() {
   const formik: FormikProps<IAgreement> = useAgreement();
@@ -25,8 +25,8 @@ function Agreement() {
       action=""
       onSubmit={formik.handleSubmit}>
       <AgreementFields {...formik} />
-      <PrevBtn state={curForm} />
-      <NextBtn />
+      <PreviousFormButton state={curForm} />
+      <NextFormButton />
     </form>
   );
 }

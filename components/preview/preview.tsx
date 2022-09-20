@@ -2,10 +2,10 @@ import { FormikProps } from 'formik';
 import useInitialData from '../../hooks/useInitialdata';
 import style from '../../styles/home.module.scss';
 import { IFormData } from '../../types/form';
-import NextBtn from '../fields/nextbtn';
+import NextFormButton from '../fields/next_form_button';
 import usePreview from '../../hooks/usePreview';
 import PreviewDetails from './preview_details';
-import PrevBtn from '../fields/prevbtn';
+import PreviousFormButton from '../fields/previous_form_button';
 import { useAppSelector } from '../../states/hook';
 
 function Preview() {
@@ -23,8 +23,8 @@ function Preview() {
       action=""
       onSubmit={formik.handleSubmit}>
       <PreviewDetails {...formik} />
-      <PrevBtn state={curForm} />
-      <NextBtn />
+      <PreviousFormButton state={curForm} />
+      <NextFormButton />
     </form>
   );
 }

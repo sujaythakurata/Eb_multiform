@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import env from '../env/env.json';
+import env from '../config/config.json';
 import { useAppSelector } from '../states/hook';
 import OwnerDetails from './owner_details/owner_details';
 import RenterDetails from './renter_details/renter_details';

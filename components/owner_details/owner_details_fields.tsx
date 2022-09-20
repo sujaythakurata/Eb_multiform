@@ -1,7 +1,7 @@
 import { FormikProps } from 'formik';
 import { ChangeEvent } from 'react';
 import style from '../../styles/home.module.scss';
-import env from '../../env/env.json';
+import env from '../../config/config.json';
 import { IOwnerDetails } from '../../types/form';
 import { useAppDispatch } from '../../states/hook';
 import { addOwnerDetails } from '../../features/formslice';

@@ -2,13 +2,13 @@ import { FormikProps } from 'formik';
 import { memo } from 'react';
 import useInitialData from '../../hooks/useInitialdata';
 import style from '../../styles/home.module.scss';
-import NextBtn from '../fields/nextbtn';
-import env from '../../env/env.json';
+import NextFormButton from '../fields/next_form_button';
+import env from '../../config/config.json';
 import { IDeliveryDetails } from '../../types/form';
 import useDeliveryDetails from '../../hooks/use_delivery_details';
 import DeliveryDetailsFields from './delivery_details_fields';
 import { useAppSelector } from '../../states/hook';
-import PrevBtn from '../fields/prevbtn';
+import PreviousFormButton from '../fields/previous_form_button';
 
 function DeliveryDetails() {
   const formik: FormikProps<IDeliveryDetails> = useDeliveryDetails();
@@ -25,8 +25,8 @@ function DeliveryDetails() {
       action=""
       onSubmit={formik.handleSubmit}>
       <DeliveryDetailsFields {...formik} />
-      <PrevBtn state={curForm} />
-      <NextBtn />
+      <PreviousFormButton state={curForm} />
+      <NextFormButton />
     </form>
   );
 }

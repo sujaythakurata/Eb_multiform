@@ -2,12 +2,12 @@ import { FormikProps } from 'formik';
 import { memo } from 'react';
 import useInitialData from '../../hooks/useInitialdata';
 import style from '../../styles/home.module.scss';
-import NextBtn from '../fields/nextbtn';
-import env from '../../env/env.json';
+import NextFormButton from '../fields/next_form_button';
+import env from '../../config/config.json';
 import { IMailingDetails } from '../../types/form';
 import useMailingDetails from '../../hooks/use_mailing_details';
 import MailingDetailsField from './mailing_details_fields';
-import PrevBtn from '../fields/prevbtn';
+import PreviousFormButton from '../fields/previous_form_button';
 import { useAppSelector } from '../../states/hook';
 
 function Agreement() {
@@ -25,8 +25,8 @@ function Agreement() {
       action=""
       onSubmit={formik.handleSubmit}>
       <MailingDetailsField {...formik} />
-      <PrevBtn state={curForm} />
-      <NextBtn />
+      <PreviousFormButton state={curForm} />
+      <NextFormButton />
     </form>
   );
 }

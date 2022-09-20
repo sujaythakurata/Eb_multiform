@@ -3,12 +3,12 @@ import { memo } from 'react';
 import useInitialData from '../../hooks/useInitialdata';
 import style from '../../styles/home.module.scss';
 import { IRenterDetails } from '../../types/form';
-import NextBtn from '../fields/nextbtn';
-import env from '../../env/env.json';
+import NextFormButton from '../fields/next_form_button';
+import env from '../../config/config.json';
 import useRenterDetails from '../../hooks/use_renter_details';
 import RenterDetailsFields from './renter_details_fields';
 import { useAppSelector } from '../../states/hook';
-import PrevBtn from '../fields/prevbtn';
+import PreviousFormButton from '../fields/previous_form_button';
 
 function OwnerDetails() {
   const formik: FormikProps<IRenterDetails> = useRenterDetails();
@@ -25,8 +25,8 @@ function OwnerDetails() {
       action=""
       onSubmit={formik.handleSubmit}>
       <RenterDetailsFields {...formik} />
-      <PrevBtn state={curForm} />
-      <NextBtn />
+      <PreviousFormButton state={curForm} />
+      <NextFormButton />
     </form>
   );
 }

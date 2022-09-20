@@ -1,5 +1,5 @@
 import * as Yup from 'yup';
-import env from '../env/env.json';
+import env from '../config/config.json';
 
 /*
  *@return yup object validation schemea

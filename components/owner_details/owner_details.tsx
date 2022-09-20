@@ -4,9 +4,9 @@ import useOwnerDetails from '../../hooks/use_owner_details';
 import useInitialData from '../../hooks/useInitialdata';
 import style from '../../styles/home.module.scss';
 import { IOwnerDetails } from '../../types/form';
-import NextBtn from '../fields/nextbtn';
+import NextFormButton from '../fields/next_form_button';
 import OwnerDetailsFields from './owner_details_fields';
-import env from '../../env/env.json';
+import env from '../../config/config.json';
 
 function OwnerDetails() {
   const formik: FormikProps<IOwnerDetails> = useOwnerDetails();
@@ -22,7 +22,7 @@ function OwnerDetails() {
       action=""
       onSubmit={formik.handleSubmit}>
       <OwnerDetailsFields {...formik} />
-      <NextBtn />
+      <NextFormButton />
     </form>
   );
 }
