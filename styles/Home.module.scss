@@ -1,11 +1,52 @@
+@import 'color.scss';
 .grid__container {
   display: grid;
   min-height: 100%;
   height: auto;
   grid: 60px calc(100% - 60px) / 100%;
-  border: solid green;
-  .grid__area__1,
-  .grid__area__2 {
-    border: solid yellow;
+}
+
+.form__main__area {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.form__title {
+  height: auto;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.form__content__area {
+  width: 100%;
+  text-transform: capitalize;
+}
+.form__button__area {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 10px;
+}
+.preview__accrodion__body {
+  background-color: $primary;
+  text-transform: capitalize;
+}
+.preview__accordion__header {
+  text-transform: uppercase;
+  background-color: $secondary !important;
+  color: $primary !important;
+}
+
+@media only screen and (max-width: 480px) {
+  .form__title {
+    font-size: 0.8rem;
   }
 }

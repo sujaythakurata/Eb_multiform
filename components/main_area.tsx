@@ -1,17 +1,15 @@
 import SideBar from './sidebar';
+import style from '../styles/main_area.module.scss';
 
 export default function MainArea({ children }: { children: JSX.Element }) {
   return (
     <>
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col-sm-4 col-lg-12">
+      <div className={`card ${style.main__area}`}>
+        <div className="row card-body">
+          <div className="col-2">
             <SideBar />
           </div>
-          <div className="col-sm-8 col-lg-12">
-            {children}
-            <button className="btn btn-primary">ok</button>
-          </div>
+          <div className="col-10">{children}</div>
         </div>
       </div>
     </>

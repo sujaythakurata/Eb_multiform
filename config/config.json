@@ -1,0 +1,140 @@
+{
+  "form": {
+    "totalNumberForms": [
+      {
+        "state": 0,
+        "title": "Owner / Lessor/ LandLord Details (First Part)"
+      },
+      {
+        "state": 1,
+        "title": "Renter / Lesser/ Tenant Details (Second Part)"
+      },
+      {
+        "state": 2,
+        "title": "Other claues of Agreement"
+      },
+      {
+        "state": 3,
+        "title": "particular and Mailing details"
+      },
+      {
+        "state": 4,
+        "title": "deatils for document to sent"
+      },
+      {
+        "state": 5,
+        "title": "preview"
+      }
+    ],
+    "ownerDetails": {
+      "name": "ownerDetails",
+      "title": "Owner / Lessor/ LandLord Details (First Part)",
+      "state": 0,
+      "titleLabel": "Title",
+      "titleOptions": ["mr", "ms", "mrs"],
+      "nameLabel": "owner Name",
+      "relationLabel": "is a",
+      "relationOptions": ["son", "daughter", "wife"],
+      "relationNameLabel": "Father/husband Name",
+      "addressLabel": "owner address witn pincode",
+      "ownerKeys": [
+        "ownerDesignation",
+        "ownerName",
+        "ownerRelation",
+        "ownerRelationName",
+        "ownerAddress"
+      ]
+    },
+    "renterDetails": {
+      "name": "renterDetails",
+      "title": "Renter / Lesser/ Tenant Details (Second Part)",
+      "state": 1,
+      "titleLabel": "title",
+      "titleOptions": ["mr", "ms", "mrs"],
+      "nameLabel": "renter name",
+      "relationLabel": "is a",
+      "relationOptions": ["son", "daughter", "wife"],
+      "relationNameLabel": "Father/husband Name",
+      "addressLabel": "renter's permanent address",
+      "renterKeys": [
+        "renterDesgination",
+        "renterName",
+        "renterRelation",
+        "renterRelationName",
+        "renterAddress"
+      ]
+    },
+    "agreement": {
+      "name": "agreement",
+      "title": "Other claues of Agreement",
+      "state": 2,
+      "doaLabel": "select agreement date",
+      "rentLabel": "monthly rent",
+      "rentedLabel": "rentend property",
+      "rentedOptions": ["kolkata", "delhi", "hyderabad"],
+      "addressLabel": "address of rented property",
+      "propertyLabel": "property details/fixtures (optional)",
+      "advanceLabel": "advance amount paid",
+      "clauseLabel": "other clauses or changes (E.g. partners details)",
+      "clauseTooltip": "Enter the details other than standard clauses as in sample agreement. click on icon for sample agreement",
+      "agreementKeys": [
+        "doa",
+        "advanceAmountPaid",
+        "monthlyRent",
+        "propertyLocation",
+        "addressOfProperty",
+        "clauses",
+        "propertyDetails"
+      ]
+    },
+    "mailingDetails": {
+      "name": "mailingDetails",
+      "title": "particular and Mailing details",
+      "state": 3,
+      "dutyLabel": "stamp duty amount(INR)",
+      "dutyOptions": [100, 200, 500],
+      "codeLabel": "any offer code",
+      "notaryLabel": "Notary seal",
+      "notarOptions": ["yes", "not yet"],
+      "notaryTooltip": "Extra charges applicable. Send id proof to support@rentalagreement.in",
+      "feeLabel": "fee paid by",
+      "feeOptions": ["1st party", "2nd party"],
+      "deliveryLabel": "delivery",
+      "deliveryOptions": ["standard courier", "speed post"],
+      "deliveryTooltip": "select premium courier for 100% secure & faster delivery. refer payment details form pricing.",
+      "mailingKeys": [
+        "stampDutyAmount",
+        "notarySeal",
+        "code",
+        "paidBy",
+        "delivery"
+      ]
+    },
+    "deliveryDetails": {
+      "name": "deliveryDetails",
+      "title": "deatils for document to sent",
+      "state": 4,
+      "postalLabel": "postal",
+      "postalOptions": ["post", "delivery"],
+      "nameLabel": "contact Name",
+      "contactLabel": "contact number",
+      "contactTooltip": "Important: sms and courier team would use this number",
+      "emailLabel": "email id",
+      "mailingLabel": "mailing address",
+      "pincodeLabel": "pincode",
+      "deliveryKeys": [
+        "postal",
+        "contactName",
+        "contactNumber",
+        "email",
+        "mailingAddress",
+        "pincode"
+      ]
+    },
+    "preview": {
+      "name": "preview",
+      "title": "preview",
+      "state": 5
+    }
+  }
+}
