@@ -1,6 +1,7 @@
 import { FormikProps } from 'formik';
 import { ChangeEvent } from 'react';
 import ToolTip from './tooltip';
+import style from '../../styles/field.module.scss';
 
 type IInput = FormikProps<any> & {
   id: string;
@@ -22,7 +23,7 @@ export default function Input(props: IInput) {
       </label>
       <input
         type={props.type ?? 'text'}
-        className="form-control"
+        className={`form-control ${style.input__field}`}
         name={props.id}
         id={props.id}
         aria-describedby={`aria${props.id}`}
@@ -30,7 +31,7 @@ export default function Input(props: IInput) {
         onBlur={props.onBlur}
         value={props.value}
       />
-      <div id={`aria${props.id}`} className="form-text text-danger">
+      <div id={`aria${props.id}`} className="form-text text-warning">
         {props.touchField && props.errorMsg ? props.errorMsg : null}
       </div>
     </>

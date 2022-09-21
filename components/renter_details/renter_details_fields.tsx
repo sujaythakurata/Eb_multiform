@@ -27,8 +27,8 @@ export default function RenterDetailsFields(
     *form 1 fields
   */
   return (
-    <div className={`card-body ${style.card__body}`}>
-      <div className={`${style.form__content__area} row`}>
+    <div className={style.form__field__main__area}>
+      <div className={`${style.form__field__area}`}>
         <div className={`form-group ${style.content__area__30}`}>
           <Radio
             {...props}
@@ -53,7 +53,7 @@ export default function RenterDetailsFields(
           />
         </div>
       </div>
-      <div className={`${style.form__content__area} row`}>
+      <div className={`${style.form__field__area}`}>
         <div className={`form-group ${style.content__area__30}`}>
           <Radio
             {...props}
@@ -78,7 +78,7 @@ export default function RenterDetailsFields(
           />
         </div>
       </div>
-      <div className={`${style.form__content__area} row`}>
+      <div className={`${style.form__field__area}`}>
         <div className={`form-group ${style.content__area__100}`}>
           <TextArea
             {...props}

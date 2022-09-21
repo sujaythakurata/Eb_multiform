@@ -11,13 +11,13 @@ type renterDetails = Yup.InferType<any>;
 const validation: renterDetails = {};
 validation[renterKeys[0]] = Yup.string().required('this field is required');
 validation[renterKeys[1]] = Yup.string()
-  .matches(/[a-zA-z ]{1,}$/, 'valid name only letters allowed')
+  .matches(/[a-zA-z ]{1,}$/, 'invalid name only letters allowed')
   .min(5, 'minium 5 character')
   .max(30, 'maximum 30 character allowed')
   .required('this field is required');
 validation[renterKeys[2]] = Yup.string().required('this field is required');
 validation[renterKeys[3]] = Yup.string()
-  .matches(/[a-zA-z ]{1,}$/, 'valid name only letters allowed')
+  .matches(/[a-zA-z ]{1,}$/, 'invalid name only letters allowed')
   .min(5, 'minium 5 character')
   .max(30, 'maximum 30 character allowed')
   .required('this field is required');

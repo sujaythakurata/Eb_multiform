@@ -1,6 +1,7 @@
 import { FormikProps } from 'formik';
 import { ChangeEvent } from 'react';
 import ToolTip from './tooltip';
+import style from '../../styles/field.module.scss';
 
 type ITextArea = FormikProps<any> & {
   id: string;
@@ -20,14 +21,14 @@ export default function TextArea(props: ITextArea) {
         {props.label}
       </label>
       <textarea
-        className="form-control"
+        className={`form-control ${style.input__field}`}
         name={props.id}
         id={props.id}
         aria-describedby={`aria${props.id}`}
         onChange={props.handleChange}
         onBlur={props.onBlur}
         value={props.value}></textarea>
-      <div id={`aria${props.id}`} className="form-text text-danger">
+      <div id={`aria${props.id}`} className="form-text text-warning">
         {props.touchField && props.errorMsg ? props.errorMsg : null}
       </div>
     </>

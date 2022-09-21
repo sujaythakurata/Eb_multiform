@@ -25,8 +25,8 @@ export default function AgreementFields(props: FormikProps<IAgreement>) {
     *form 1 fields
   */
   return (
-    <div className={`card-body ${style.card__body}`}>
-      <div className={style.form__content__area}>
+    <div className={style.form__field__main__area}>
+      <div className={style.form__field__area}>
         <div className={`form-group ${style.content__area__50}`}>
           <Input
             {...props}
@@ -52,7 +52,7 @@ export default function AgreementFields(props: FormikProps<IAgreement>) {
           />
         </div>
       </div>
-      <div className={style.form__content__area}>
+      <div className={style.form__field__area}>
         <div className={`form-group ${style.content__area__50}`}>
           <Input
             {...props}
@@ -79,7 +79,7 @@ export default function AgreementFields(props: FormikProps<IAgreement>) {
           />
         </div>
       </div>
-      <div className={style.form__content__area}>
+      <div className={style.form__field__area}>
         <div className={`form-group ${style.content__area__50}`}>
           <TextArea
             {...props}
@@ -104,7 +104,7 @@ export default function AgreementFields(props: FormikProps<IAgreement>) {
           />
         </div>
       </div>
-      <div className={style.form__content__area}>
+      <div className={style.form__field__area}>
         <label className="me-2"></label>
         <div className={`form-group ${style.content__area__100}`}>
           <TextArea

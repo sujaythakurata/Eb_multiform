@@ -8,15 +8,11 @@ export default function PreviousFormButton({ state }: { state: number }) {
     dispatch(setNextForm(state - 1));
   };
   return (
-    <>
-      <div className={style.form__content__area}>
-        <button
-          className={`btn btn-lg btn-light ${style.next__btn}`}
-          onClick={handleClick}
-          type="button">
-          Previous
-        </button>
-      </div>
-    </>
+    <button
+      className={`btn btn-lg btn-light ${style.next__btn} me-2`}
+      onClick={handleClick}
+      type="button">
+      Previous
+    </button>
   );
 }

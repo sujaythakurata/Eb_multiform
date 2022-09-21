@@ -26,8 +26,8 @@ export default function MailingDetailsField(
     *form 1 fields
   */
   return (
-    <div className={`card-body ${style.card__body}`}>
-      <div className={style.form__content__area}>
+    <div className={style.form__field__main__area}>
+      <div className={style.form__field__area}>
         <div className={`form-group ${style.content__area__50}`}>
           <Select
             {...props}
@@ -56,7 +56,7 @@ export default function MailingDetailsField(
           />
         </div>
       </div>
-      <div className={style.form__content__area}>
+      <div className={style.form__field__area}>
         <div className={`form-group ${style.content__area__50}`}>
           <Input
             {...props}
@@ -82,7 +82,7 @@ export default function MailingDetailsField(
           />
         </div>
       </div>
-      <div className={style.form__content__area}>
+      <div className={style.form__field__area}>
         <label className="me-1"></label>
         <div className={`form-group ${style.content__area__100}`}>
           <Select

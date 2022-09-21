@@ -1,0 +1,14 @@
+@import './color.scss';
+
+.main__area {
+  padding: 20px;
+  margin: 20% 10% 10% 10%;
+  background-color: $primary;
+  color: $secondary;
+}
+
+@media only screen and (max-width: 480px) {
+  .main__area {
+    margin-top: 40%;
+  }
+}

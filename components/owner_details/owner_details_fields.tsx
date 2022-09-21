@@ -25,9 +25,9 @@ export default function OwnerDetailsFields(props: FormikProps<IOwnerDetails>) {
     *form 1 fields
   */
   return (
-    <div className={`card-body ${style.card__body}`}>
-      <div className={`${style.form__content__area} row`}>
-        <div className={`form-group ${style.content__area__30}`}>
+    <div className={style.form__field__main__area}>
+      <div className={`${style.form__field__area}`}>
+        <div className={'form-group'}>
           <Radio
             {...props}
             onBlur={onBlur}
@@ -39,7 +39,7 @@ export default function OwnerDetailsFields(props: FormikProps<IOwnerDetails>) {
             formValue={formFields.titleOptions}
           />
         </div>
-        <div className={`form-group ${style.content__area__70}`}>
+        <div className={'form-group'}>
           <Input
             {...props}
             onBlur={onBlur}
@@ -51,7 +51,7 @@ export default function OwnerDetailsFields(props: FormikProps<IOwnerDetails>) {
           />
         </div>
       </div>
-      <div className={`${style.form__content__area} row`}>
+      <div className={`${style.form__field__area}`}>
         <div className={`form-group ${style.content__area__30}`}>
           <Radio
             {...props}
@@ -76,7 +76,7 @@ export default function OwnerDetailsFields(props: FormikProps<IOwnerDetails>) {
           />
         </div>
       </div>
-      <div className={`${style.form__content__area} row`}>
+      <div className={`${style.form__field__area}`}>
         <div className={`form-group ${style.content__area__100}`}>
           <TextArea
             {...props}

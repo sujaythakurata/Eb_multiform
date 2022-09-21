@@ -1,5 +1,31 @@
 {
   "form": {
+    "totalNumberForms": [
+      {
+        "state": 0,
+        "title": "Owner / Lessor/ LandLord Details (First Part)"
+      },
+      {
+        "state": 1,
+        "title": "Renter / Lesser/ Tenant Details (Second Part)"
+      },
+      {
+        "state": 2,
+        "title": "Other claues of Agreement"
+      },
+      {
+        "state": 3,
+        "title": "particular and Mailing details"
+      },
+      {
+        "state": 4,
+        "title": "deatils for document to sent"
+      },
+      {
+        "state": 5,
+        "title": "preview"
+      }
+    ],
     "ownerDetails": {
       "name": "ownerDetails",
       "title": "Owner / Lessor/ LandLord Details (First Part)",
@@ -71,7 +97,7 @@
       "notaryLabel": "Notary seal",
       "notarOptions": ["yes", "not yet"],
       "notaryTooltip": "Extra charges applicable. Send id proof to support@rentalagreement.in",
-      "feeLabel": "fee pad by",
+      "feeLabel": "fee paid by",
       "feeOptions": ["1st party", "2nd party"],
       "deliveryLabel": "delivery",
       "deliveryOptions": ["standard courier", "speed post"],

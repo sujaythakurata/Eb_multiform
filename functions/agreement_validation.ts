@@ -23,12 +23,12 @@ validation[agreementKeys[2]] = Yup.number()
   .required('this field is required');
 validation[agreementKeys[3]] = Yup.string().required('this field is required');
 validation[agreementKeys[4]] = Yup.string()
-  .matches(/[a-zA-z0-9]{1,}$/, 'no special character allowed')
+  .matches(/[a-zA-Z0-9 ]{1,}$/, 'no special character allowed')
   .min(10, 'minium 10 character')
   .max(100, 'maximum 100 character allowed')
   .required('this field is required');
 validation[agreementKeys[5]] = Yup.string()
-  .matches(/[a-zA-z0-9]*/, 'no special character allowed')
+  .matches(/[a-zA-Z0-9 ]{1,}$/, 'no special character allowed')
   .min(10, 'minium 10 character')
   .max(100, 'maximum 100 character allowed')
   .required('this field is required');

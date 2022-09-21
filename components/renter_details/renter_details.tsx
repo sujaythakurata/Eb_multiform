@@ -4,7 +4,7 @@ import useInitialData from '../../hooks/useInitialdata';
 import style from '../../styles/home.module.scss';
 import { IRenterDetails } from '../../types/form';
 import NextFormButton from '../fields/next_form_button';
-import env from '../../config/config.json';
+import config from '../../config/config.json';
 import useRenterDetails from '../../hooks/use_renter_details';
 import RenterDetailsFields from './renter_details_fields';
 import { useAppSelector } from '../../states/hook';
@@ -17,17 +17,24 @@ function OwnerDetails() {
    *set form initial data if there is any
    *@return void
    */
-  useInitialData(formik, env.form.renterDetails.name);
+  useInitialData(formik, config.form.renterDetails.name);
 
   return (
-    <form
-      className={`${style.form__area}`}
-      action=""
-      onSubmit={formik.handleSubmit}>
-      <RenterDetailsFields {...formik} />
-      <PreviousFormButton state={curForm} />
-      <NextFormButton />
-    </form>
+    <div className={style.form__main__area}>
+      <div className={style.form__title}>{config.form.renterDetails.title}</div>
+      <div className={`${style.form__content__area}`}>
+        <form
+          className={`${style.form__area}`}
+          action=""
+          onSubmit={formik.handleSubmit}>
+          <RenterDetailsFields {...formik} />
+          <div className={style.form__button__area}>
+            <PreviousFormButton state={curForm} />
+            <NextFormButton />
+          </div>
+        </form>
+      </div>
+    </div>
   );
 }
 

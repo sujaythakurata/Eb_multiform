@@ -23,7 +23,7 @@ export default function Select(props: ISelect) {
         {props.label}
       </label>
       <select
-        className="form-select"
+        className={'form-select '}
         aria-label={props.label}
         name={props.id}
         id={props.id}
@@ -37,7 +37,7 @@ export default function Select(props: ISelect) {
           </option>
         ))}
       </select>
-      <div id={`aria${props.id}`} className="form-text text-danger">
+      <div id={`aria${props.id}`} className="form-text text-warning">
         {props.touchField && props.errorMsg ? props.errorMsg : null}
       </div>
     </>

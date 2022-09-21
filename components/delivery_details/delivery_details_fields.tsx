@@ -27,8 +27,8 @@ export default function DeliveryDetailsFields(
     *form 1 fields
   */
   return (
-    <div className={`card-body ${style.card__body}`}>
-      <div className={style.form__content__area}>
+    <div className={style.form__field__main__area}>
+      <div className={style.form__field__area}>
         <div className={'form-group'}>
           <Select
             {...props}
@@ -54,7 +54,7 @@ export default function DeliveryDetailsFields(
           />
         </div>
       </div>
-      <div className={style.form__content__area}>
+      <div className={style.form__field__area}>
         <div className={`form-group ${style.content__area__50}`}>
           <Input
             {...props}
@@ -68,7 +68,6 @@ export default function DeliveryDetailsFields(
           />
         </div>
         <div className={`form-group ${style.content__area__50}`}>
-          <label className="me-1">*</label>
           <Input
             {...props}
             onBlur={onBlur}
@@ -80,7 +79,7 @@ export default function DeliveryDetailsFields(
           />
         </div>
       </div>
-      <div className={style.form__content__area}>
+      <div className={style.form__field__area}>
         <div className={`form-group ${style.content__area__70}`}>
           <TextArea
             {...props}

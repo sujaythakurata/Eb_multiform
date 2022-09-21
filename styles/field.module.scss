@@ -1,0 +1,14 @@
+@import 'color.scss';
+@media screen and (max-width: 480px) {
+  .radio__area {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+
+.input__field {
+  background-color: inherit;
+  color: $secondary;
+  border: 2px solid;
+}
