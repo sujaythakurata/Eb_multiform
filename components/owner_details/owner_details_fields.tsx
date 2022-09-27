@@ -22,7 +22,7 @@ export default function OwnerDetailsFields(props: FormikProps<IOwnerDetails>) {
   };
   /*
     @return jsx Element
-    *form 1 fields
+    *owner details form
   */
   return (
     <div className={style.form__field__main__area}>

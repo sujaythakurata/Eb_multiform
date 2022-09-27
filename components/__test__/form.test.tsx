@@ -6,6 +6,12 @@ import config from '../../config/config.json';
 import renderWithProviders from './redux-test-util';
 import { setNextForm } from '../../features/formslice';
 
+const renderPage = async (state: number) => {
+  await act(async () => {
+    store.dispatch(setNextForm(state));
+    await renderWithProviders(<Form />, { store });
+  });
+};
 afterEach(cleanup);
 describe('Form component', () => {
   it('Form owner details form render without error', async () => {
@@ -44,10 +50,3 @@ describe('Form component', () => {
     expect(config.form.preview.title).toEqual(text);
   });
 });
-
-const renderPage = async (state: number) => {
-  await act(async () => {
-    store.dispatch(setNextForm(state));
-    await renderWithProviders(<Form />, { store });
-  });
-};
