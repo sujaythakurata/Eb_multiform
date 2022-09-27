@@ -12,10 +12,21 @@
     "no-undef": "off",
     "no-param-reassign": "off",
     "no-console": "warn",
-    "arrow-parens": "off"
+    "arrow-parens": "off",
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": true,
+        "optionalDependencies": true,
+        "peerDependencies": true
+      }
+    ]
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "project": "./tsconfig.json"
+  },
+  "env": {
+    "jest": true
   }
 }

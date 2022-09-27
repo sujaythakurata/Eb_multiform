@@ -13,6 +13,7 @@ type IInput = FormikProps<any> & {
   value: string | number;
   type?: string;
   toolTip?: string;
+  testId?: string;
 };
 export default function Input(props: IInput) {
   return (
@@ -30,6 +31,7 @@ export default function Input(props: IInput) {
         onChange={props.handleChange}
         onBlur={props.onBlur}
         value={props.value}
+        data-testid={props.testId}
       />
       <div id={`aria${props.id}`} className="form-text text-warning">
         {props.touchField && props.errorMsg ? props.errorMsg : null}

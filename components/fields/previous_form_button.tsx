@@ -11,7 +11,8 @@ export default function PreviousFormButton({ state }: { state: number }) {
     <button
       className={`btn btn-lg btn-light ${style.next__btn} me-2`}
       onClick={handleClick}
-      type="button">
+      type="button"
+      data-testid="previous-button">
       Previous
     </button>
   );

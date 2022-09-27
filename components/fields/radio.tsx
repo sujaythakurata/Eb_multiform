@@ -11,6 +11,7 @@ type IRadio = FormikProps<any> & {
   touchField: boolean | undefined;
   value: string;
   formValue: Array<string>;
+  testId?: string;
 };
 
 export default function Radio(props: IRadio) {
@@ -31,10 +32,12 @@ export default function Radio(props: IRadio) {
               onBlur={props.onBlur}
               checked={props.value === value}
               value={value}
+              data-testid={`${props.testId}-${index}`}
             />
             <label
               className="form-check-label"
-              htmlFor={`${props.id}-${index}`}>
+              htmlFor={`${props.id}-${index}`}
+              data-testid={`${props.testId}-${index}-label`}>
               {value}
             </label>
           </div>

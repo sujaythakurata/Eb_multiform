@@ -2,7 +2,7 @@
 import { render } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { act } from 'react-dom/test-utils';
-import Index from '../pages';
+import Index from '.';
 import { store } from '../states/store';
 
 const renderComponent = async () => {
@@ -13,8 +13,9 @@ const renderComponent = async () => {
   );
 };
 
+beforeAll(async () => {
+  await act(renderComponent);
+});
 describe('Index Page', () => {
-  test('Index Page Render', async () => {
-    await act(renderComponent);
-  });
+  it('Index Page Render', async () => {});
 });

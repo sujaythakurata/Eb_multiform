@@ -18,7 +18,11 @@ function OwnerDetails() {
 
   return (
     <div className={style.form__main__area}>
-      <div className={style.form__title}>{config.form.ownerDetails.title}</div>
+      <div
+        className={style.form__title}
+        data-testid={config.form.ownerDetails.testId.title}>
+        {config.form.ownerDetails.title}
+      </div>
       <div className={`${style.form__content__area}`}>
         <form action="" onSubmit={formik.handleSubmit}>
           <OwnerDetailsFields {...formik} />

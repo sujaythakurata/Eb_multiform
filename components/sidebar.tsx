@@ -28,6 +28,7 @@ export default function SideBar() {
           <div
             className={style.status__circle}
             onClick={() => handelClick(value.state)}
+            data-testid={`tooltip-test-${value.state}`}
             data-toggle="tooltip"
             data-html={true}
             data-tip
@@ -48,7 +49,7 @@ export default function SideBar() {
             )}
             {tooltip && (
               <ReactTooltip id={`${value.state}`} effect="solid" html={true}>
-                {value.title}
+                {`<span data-testid="tooltip-test-title-${value.state}">${value.title}</span>`}
               </ReactTooltip>
             )}
           </div>

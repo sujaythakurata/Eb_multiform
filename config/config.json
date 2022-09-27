@@ -29,6 +29,17 @@
     "ownerDetails": {
       "name": "ownerDetails",
       "title": "Owner / Lessor/ LandLord Details (First Part)",
+      "testId": {
+        "title": "owner-details-title",
+        "titleBtn": "owner-details-title-btn",
+        "titleLabel": "title-label-test",
+        "titleOptions": "title-option-test",
+        "nameLabel": "name-label-test",
+        "relationLabel": "relation-label-test",
+        "relationOptions": "relation-options-test",
+        "relationNameLabel": "relation-label-name-test",
+        "addressLabel": "address-labels-test"
+      },
       "state": 0,
       "titleLabel": "Title",
       "titleOptions": ["mr", "ms", "mrs"],
@@ -48,6 +59,8 @@
     "renterDetails": {
       "name": "renterDetails",
       "title": "Renter / Lesser/ Tenant Details (Second Part)",
+      "title-test": "renter-details-title",
+      "title-test-btn": "renter-details-title-btn",
       "state": 1,
       "titleLabel": "title",
       "titleOptions": ["mr", "ms", "mrs"],
@@ -67,6 +80,8 @@
     "agreement": {
       "name": "agreement",
       "title": "Other claues of Agreement",
+      "title-test": "agreement-title",
+      "title-test-btn": "agreement-title-btn",
       "state": 2,
       "doaLabel": "select agreement date",
       "rentLabel": "monthly rent",
@@ -90,6 +105,8 @@
     "mailingDetails": {
       "name": "mailingDetails",
       "title": "particular and Mailing details",
+      "title-test": "mailing-details-title",
+      "title-test-btn": "mailing-details-title-btn",
       "state": 3,
       "dutyLabel": "stamp duty amount(INR)",
       "dutyOptions": [100, 200, 500],
@@ -113,6 +130,8 @@
     "deliveryDetails": {
       "name": "deliveryDetails",
       "title": "deatils for document to sent",
+      "title-test": "delivery-details-title",
+      "title-test-btn": "delivery-details-title-btn",
       "state": 4,
       "postalLabel": "postal",
       "postalOptions": ["post", "delivery"],
