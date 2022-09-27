@@ -45,9 +45,9 @@ export const userSlice = createSlice({
       state.formData.deliveryDetails = action.payload;
       setLocalStoreData(state.curForm, state.formData);
     },
-    addForm: (state, action: PayloadAction<IFormData>) => {
-      state.formData = action.payload;
-    },
+    // addForm: (state, action: PayloadAction<IFormData>) => {
+    //   state.formData = action.payload;
+    // },
     /*
      *if there is any initial data it will restore it
      *@type formData
@@ -92,5 +92,5 @@ export const {
   addDeliveryDetails,
   getInitialData,
   setNextForm,
-  addForm,
+  // addForm,
 } = userSlice.actions;

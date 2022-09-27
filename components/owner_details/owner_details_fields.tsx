@@ -22,7 +22,7 @@ export default function OwnerDetailsFields(props: FormikProps<IOwnerDetails>) {
   };
   /*
     @return jsx Element
-    *form 1 fields
+    *owner details form
   */
   return (
     <div className={style.form__field__main__area}>
@@ -37,6 +37,7 @@ export default function OwnerDetailsFields(props: FormikProps<IOwnerDetails>) {
             touchField={props.touched.ownerDesignation}
             value={props.values.ownerDesignation}
             formValue={formFields.titleOptions}
+            testId={formFields.testId.titleLabel}
           />
         </div>
         <div className={'form-group'}>
@@ -48,6 +49,7 @@ export default function OwnerDetailsFields(props: FormikProps<IOwnerDetails>) {
             errorMsg={props.errors.ownerName}
             touchField={props.touched.ownerName}
             value={props.values.ownerName}
+            testId={formFields.testId.nameLabel}
           />
         </div>
       </div>
@@ -62,6 +64,7 @@ export default function OwnerDetailsFields(props: FormikProps<IOwnerDetails>) {
             touchField={props.touched.ownerRelation}
             value={props.values.ownerRelation}
             formValue={formFields.relationOptions}
+            testId={formFields.testId.relationLabel}
           />
         </div>
         <div className={`form-group  ${style.content__area__70}`}>
@@ -73,6 +76,7 @@ export default function OwnerDetailsFields(props: FormikProps<IOwnerDetails>) {
             errorMsg={props.errors.ownerRelationName}
             touchField={props.touched.ownerRelationName}
             value={props.values.ownerRelationName}
+            testId={formFields.testId.relationNameLabel}
           />
         </div>
       </div>
@@ -86,6 +90,7 @@ export default function OwnerDetailsFields(props: FormikProps<IOwnerDetails>) {
             errorMsg={props.errors.ownerAddress}
             touchField={props.touched.ownerAddress}
             value={props.values.ownerAddress}
+            testId={formFields.testId.addressLabel}
           />
         </div>
       </div>

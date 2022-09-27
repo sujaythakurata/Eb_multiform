@@ -13,6 +13,7 @@ type ISelect = FormikProps<any> & {
   formValue: Array<string> | Array<number>;
   toolTip?: string;
   defaultValue: string | number;
+  testId?: string;
 };
 
 export default function Select(props: ISelect) {
@@ -29,7 +30,8 @@ export default function Select(props: ISelect) {
         id={props.id}
         onChange={props.handleChange}
         onBlur={props.onBlur}
-        value={props.value}>
+        value={props.value}
+        data-testid={props.testId}>
         <option value={props.defaultValue}>select {props.label}</option>
         {props.formValue.map((option, index) => (
           <option key={index} value={option}>

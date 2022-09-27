@@ -12,6 +12,7 @@ type ITextArea = FormikProps<any> & {
   touchField: boolean | undefined;
   value: string;
   toolTip?: string;
+  testId?: string;
 };
 export default function TextArea(props: ITextArea) {
   return (
@@ -27,7 +28,8 @@ export default function TextArea(props: ITextArea) {
         aria-describedby={`aria${props.id}`}
         onChange={props.handleChange}
         onBlur={props.onBlur}
-        value={props.value}></textarea>
+        value={props.value}
+        data-testid={props.testId}></textarea>
       <div id={`aria${props.id}`} className="form-text text-warning">
         {props.touchField && props.errorMsg ? props.errorMsg : null}
       </div>

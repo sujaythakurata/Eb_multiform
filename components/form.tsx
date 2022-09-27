@@ -1,5 +1,5 @@
 /* eslint-disable prettier/prettier */
-import env from '../config/config.json';
+import config from '../config/config.json';
 import { useAppSelector } from '../states/hook';
 import OwnerDetails from './owner_details/owner_details';
 import RenterDetails from './renter_details/renter_details';
@@ -14,15 +14,15 @@ export default function Form() {
   */
   const curState = useAppSelector(state => state.form.curForm);
   switch (curState) {
-  case env.form.ownerDetails.state:
+  case config.form.ownerDetails.state:
     return <OwnerDetails />;
-  case env.form.renterDetails.state:
+  case config.form.renterDetails.state:
     return <RenterDetails />;
-  case env.form.agreement.state:
+  case config.form.agreement.state:
     return <Agreement />;
-  case env.form.mailingDetails.state:
+  case config.form.mailingDetails.state:
     return <MailingDetails />;
-  case env.form.deliveryDetails.state:
+  case config.form.deliveryDetails.state:
     return <DeliveryDetails />;
   default:
     return <Preview />;
